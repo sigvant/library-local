@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Library</title>
+    <link rel="stylesheet" href='style.css'>
+</head>
+<body>
+    
+<div class='main-container'>
+    <div class='form-box'>
+        <h2>Add New Book To the Collection!</h2>
+        <div>            
+            <span class='label'>Title:</span> <input class='new-title' type="text" name="title" required>
+            <span class='label'>Author:</span> <input class='new-author' type="text" name="author" required>
+            <span class='label'>Pages:</span> <input class='new-pages' type="email" name="pages" required>
+            <span class='label'>Read:</span> <input class='new-read' type='checkbox'>
+        </div>
+        <div>
+            <input id='add-new-book'type="submit" value="Add to Library">
+        </div>
+    </div>
+    <div class='library-pane'>
+        <div class='library-header'>
+            <!-- <div class='header header-order'>#</div> -->
+            <div class='header header-title'>Title</div>
+            <div class='header header-author'>Author</div>
+            <div class='header header-pages'>Pages</div>
+            <div class='header header-read'>Read</div>
+            <div class='header header-remove'></div>
+        </div>
+        <div class='library-holder'></div>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
