@@ -1,15 +1,18 @@
 let myLibrary = JSON.parse(localStorage.getItem('libraryArray')) || [];
-const library = document.querySelector('.library-holder');
 
-function Book(title, author, pages, read) {
-    this.title = title
-    this.author = author
-    this.pages = pages
-    this.read = read
+
+class Book {
+    
+    constructor(title, author, pages, read) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+    }
 }
 
 function addBookToLibrary(title, author, pages, read) {
-    let book = new Book(title, author, pages, read );
+    let book = new Book(title, author, pages, read);
     myLibrary.push(book)
 }
 
@@ -32,7 +35,7 @@ function libraryLoop () {
         // let bookCardOrder = document.createElement('div');
         // bookCardOrder.classList.add('card', 'card-order');
         // bookCardOrder.textContent = `${bookOrder}`;
-;
+        
         let bookCardTitle = document.createElement('div');
         bookCardTitle.classList.add('card', 'card-title');
         bookCardTitle.textContent = `${bookTitle}`;
@@ -100,6 +103,7 @@ const newBookAuthorInput = document.querySelector('.new-author');
 const newBookPagesInput = document.querySelector('.new-pages');
 const newBookReadInput = document.querySelector('.new-read');
 const libraryPane = document.querySelector('.library-pane');
+const library = document.querySelector('.library-holder');
 
 
 addToLibraryButton.addEventListener('click', addToLibrary);
